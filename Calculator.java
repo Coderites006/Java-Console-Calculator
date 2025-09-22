@@ -1,24 +1,24 @@
 import java.util.Scanner;
 public class Calculator {
     public static void main(String[] args) {
-        // Create a Scanner object to read user input
+        // Creating a Scanner object to read user input
         Scanner sc = new Scanner(System.in);
 
-        // Prompt the user to enter the first number
+        //user chooses the first number 
         System.out.print("Enter the first number: ");
         double num1 = sc.nextDouble();
 
-        // Prompt the user to enter an operator
+        //user chooses the operator
         System.out.print("Enter an operator (+, -, *, /): ");
         char operator = sc.next().charAt(0);
 
-        // Prompt the user to enter the second number
+        //user chooses the second number
         System.out.print("Enter the second number: ");
         double num2 = sc.nextDouble();
 
         double result;
 
-        // Use a switch statement to perform the calculation based on the operator
+        // Using a switch statement to perform the calculation based on the operator
         switch (operator) {
             case '+':
                 result = num1 + num2;
@@ -41,13 +41,13 @@ public class Calculator {
             default:
                 System.out.println("Error! Invalid operator.");
                 sc.close();
-                return; // Exit the program
+                return; // Exiting the program
         }
 
-        // Print the result
+        // Printing the result
         System.out.println("The result is: " + result);
 
-        // Close the scanner
+        // Closeing the scanner
         sc.close();
     }
 }
